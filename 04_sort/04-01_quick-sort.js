@@ -1,34 +1,28 @@
-function quick_sort(array) {
+function quick_sort(array, start = 1, end = array.length) {
   if (1 >= array.length) return array;
 
-  const pivot = partition(array);
+  const pivot = partition(array, start, end);
   console.log("pivot : %d", pivot)
   console.log("pivot value : %d", array[pivot])
   console.log(array)
 }
 
-function partition(array) {
-  const n = array.length
-
-  let left = 1
-  let right = n - 1
+function partition(array, start, end) {
+  let left = start
+  let right = end - 1
 
   while (left < right) {
-    while (left < n && array[left] < array[0]) {
+    while (left < end && array[left] < array[0]) {
       left += 1
     }
-    while (right > 0 && array[right] >= array[0]) {
+    while (right > start && array[right] >= array[0]) {
       right -= 1
     }
 
     if (left < right) {
-      const temp = array[left]
-      array[left] = array[right]
-      array[right] = temp
+      [array[left], array[right]] = [array[right], array[left]]
     } else {
-      const temp = array[0]
-      array[0] = array[right]
-      array[right] = temp
+      [array[0], array[right]] = [array[right], array[0]]
     }
   }
 
