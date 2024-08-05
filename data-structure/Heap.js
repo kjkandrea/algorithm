@@ -11,8 +11,8 @@ export default class Heap {
 
     while (index > 0) {
       const parentIndex = this.getParentIndex(index)
-      if (this.heap[parentIndex] > this.heap[index]) {
-        this.swap(parentIndex, index)
+      if (this.heap[index] > this.heap[parentIndex]) {
+        this.swap(index, parentIndex)
         index = parentIndex
       } else {
         break
