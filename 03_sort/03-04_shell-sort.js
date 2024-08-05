@@ -1,4 +1,4 @@
-function shell_sort(array) {
+function shellSort(array) {
   for (
     let gap = Math.floor(array.length / 2);
     gap >= 1 ;
@@ -18,6 +18,6 @@ function shell_sort(array) {
 }
 
 const unsorted_array = [30, 20, 40, 35, 5, 10, 45, 50, 25, 15]
-const sorted_array = shell_sort(unsorted_array)
+const sorted_array = shellSort(unsorted_array)
 
 console.log(sorted_array)
