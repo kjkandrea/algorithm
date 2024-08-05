@@ -2,9 +2,17 @@ import Heap from "../data-structure/Heap.js";
 
 function heap_sort(array) {
   const heap = new Heap()
+  const sorted_array = []
 
   array.forEach(item => heap.insert(item))
-  return heap.heap
+
+  let cur = heap.extractMax()
+  while (cur !== null) {
+    sorted_array.push(cur)
+    cur = heap.extractMax()
+  }
+
+  return sorted_array
 }
 
 const unsorted_array = [60, 20, 70, 10, 80, 30, 50, 40]
