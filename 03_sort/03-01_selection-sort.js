@@ -10,9 +10,7 @@ function selectionSort(array) {
     }
 
     // 최소값을 앞에 위치시킴
-    let temp = array[i]
-    array[i] = array[min]
-    array[min] = temp
+    [array[i], array[min]] = [array[min], array[i]]
   }
 
   return array
