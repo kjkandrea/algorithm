@@ -1,5 +1,7 @@
 import MaxHeap from "../data-structure/MaxHeap.js";
 
+// 제자리 정렬 알고리즘에 부합하지 않으나, 가독성을 위해 class 로 구현
+// 힙 정렬은 제자리 정렬 알고리즘을 통해 구현할 수 있다.
 function heap_sort(array) {
   const heap = new MaxHeap()
   const sorted_array = []
