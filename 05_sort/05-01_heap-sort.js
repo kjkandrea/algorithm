@@ -1,7 +1,7 @@
-import Heap from "../data-structure/Heap.js";
+import MaxHeap from "../data-structure/MaxHeap.js";
 
 function heap_sort(array) {
-  const heap = new Heap()
+  const heap = new MaxHeap()
   const sorted_array = []
 
   array.forEach(item => heap.insert(item))
