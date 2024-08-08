@@ -1,15 +1,15 @@
 export default class Stack {
-  array = []
+  items = []
 
   push(val) {
-    this.array.push(val)
+    this.items.push(val)
   }
 
   pop() {
-    return this.array.pop()
+    return this.items.pop()
   }
 
   isEmpty() {
-    return this.array.length !== 0
+    return this.items.length === 0
   }
 }

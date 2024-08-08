@@ -19,8 +19,14 @@ export default class Graph {
       this.adjacencyList[vertex1].push(vertex2)
     }
 
-    if (!this.adjacencyList[vertex2].includes(vertex)) {
+    if (!this.adjacencyList[vertex2].includes(vertex2)) {
       this.adjacencyList[vertex2].push(vertex1)
+    }
+  }
+
+  display() {
+    for (const vertex in this.adjacencyList) {
+      console.log(vertex + " -> " + this.adjacencyList[vertex].join(", "));
     }
   }
 }
