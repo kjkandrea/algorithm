@@ -51,7 +51,7 @@ export default class LinkedList {
     if (index === 0) {
       this.head = current.next
       this.size -= 1
-      return
+      return current.value
     }
 
     let prev
@@ -63,5 +63,7 @@ export default class LinkedList {
     }
     prev.next = current.next
     this.size -= 1
+
+    return current.value
   }
 }
