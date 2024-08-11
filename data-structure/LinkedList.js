@@ -66,4 +66,8 @@ export default class LinkedList {
 
     return current.value
   }
+
+  isEmpty() {
+    return this.size === 0;
+  }
 }

@@ -14,4 +14,8 @@ export default class Queue {
   peek() {
     return this.list.getAt(0);
   }
+
+  isEmpty() {
+    return this.list.isEmpty();
+  }
 }
