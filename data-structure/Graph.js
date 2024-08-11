@@ -6,7 +6,7 @@ export default class Graph {
     this.adjacencyList[vertex] = []
   }
 
-  addEdge(vertex1, vertex2) {
+  addEdge(vertex1, vertex2, weight = null) {
     if (!this.adjacencyList[vertex1]) {
       this.addVertex(vertex1)
     }
@@ -17,13 +17,15 @@ export default class Graph {
 
     if (!this.adjacencyList[vertex1].includes(vertex2)) {
       this.adjacencyList[vertex1].push({
-        neighbor: vertex2
+        neighbor: vertex2,
+        weight
       })
     }
 
     if (!this.adjacencyList[vertex2].includes(vertex2)) {
       this.adjacencyList[vertex2].push({
-        neighbor: vertex1
+        neighbor: vertex1,
+        weight
       })
     }
   }
