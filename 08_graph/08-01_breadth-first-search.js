@@ -13,7 +13,7 @@ function breadthFirstSearch(graph, startVertex) {
     const current = queue.dequeue()
     result.push(current)
 
-    graph.adjacencyList[current].forEach(neighbor => {
+    graph.adjacencyList[current].forEach(({ neighbor }) => {
       if (!visitedTable[neighbor]) {
         queue.enqueue(neighbor)
         visitedTable[neighbor] = true
