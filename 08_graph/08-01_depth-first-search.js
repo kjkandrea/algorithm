@@ -27,6 +27,13 @@ function depthFirstSearch(graph, startVertex) {
 }
 
 const graph = new Graph()
+/**
+ *    1
+ *   /|\
+ *  2 3 4
+ *   \|  \
+ *    5   6
+ **/
 graph.addEdge(4, 6)
 graph.addEdge(1, 4)
 graph.addEdge(3, 5)
