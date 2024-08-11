@@ -42,7 +42,6 @@ graph.addEdge(1, 3)
 graph.addEdge(1, 2)
 
 graph.display()
-console.log(graph.adjacencyList)
 
 const result = depthFirstSearch(graph, 1)
 console.log(result)
