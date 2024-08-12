@@ -30,6 +30,27 @@ export default class Graph {
     }
   }
 
+  getEdges() {
+    const doneVertexSet = new Set()
+    const edges = [] // [{ start: number, end: number, weight: number }]
+
+    for (const vertex in this.adjacencyList) {
+      for (const { neighbor, weight } of this.adjacencyList[vertex]) {
+        if (doneVertexSet.has(neighbor)) continue
+
+        edges.push({
+          start: Number(vertex),
+          end: neighbor,
+          weight
+        })
+      }
+
+      doneVertexSet.add(vertex)
+    }
+
+    return edges
+  }
+
   display() {
     for (const vertex in this.adjacencyList) {
       console.log(vertex + " -> " + this.adjacencyList[vertex].map(({ neighbor }) => neighbor).join(", "));
