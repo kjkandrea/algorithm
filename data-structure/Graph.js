@@ -30,6 +30,16 @@ export default class Graph {
     }
   }
 
+  getVerticesSize() {
+    let count = 0
+
+    for (const _ in this.adjacencyList) {
+      count += 1
+    }
+
+    return count
+  }
+
   getEdges() {
     const doneVertexSet = new Set()
     const edges = [] // [{ start: number, end: number, weight: number }]
